@@ -1,1 +1,170 @@
-"hello"
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Projects & Portfolio</title>
+  <meta name="description" content="Personal portfolio - projects, contact, resume" />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7; /* light teal */
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,var(--bg),#071026);}
+    .wrap{max-width:var(--max-width);margin:30px auto;padding:20px;display:grid;grid-template-columns:300px 1fr;gap:24px}
+
+    /* SIDEBAR */
+    .sidebar{background:linear-gradient(180deg,var(--card),#071026);border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    .avatar{width:88px;height:88px;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#16324a,#18424a);display:block;margin-bottom:12px}
+    .name{font-size:18px;font-weight:700;margin:0}
+    .role{color:var(--muted);margin-top:6px;font-size:13px}
+    .bio{color:var(--muted);font-size:13px;margin-top:12px;line-height:1.4}
+    .socials{display:flex;gap:8px;margin-top:14px}
+    .pill{display:inline-block;padding:8px 10px;background:var(--glass);border-radius:10px;font-size:13px;color:var(--muted)}
+
+    /* MAIN */
+    .main{padding:20px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);min-height:400px}
+    header .title{display:flex;align-items:center;justify-content:space-between}
+    h1{font-size:20px;margin:0}
+    .sub{color:var(--muted);font-size:13px}
+
+    /* projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:120px;display:flex;flex-direction:column}
+    .card h3{margin:0;font-size:15px}
+    .card p{color:var(--muted);font-size:13px;margin-top:8px;flex:1}
+    .tags{margin-top:10px;display:flex;gap:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    .card a{margin-top:10px;text-decoration:none;color:var(--accent);font-weight:600;font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){.wrap{grid-template-columns:1fr;}.sidebar{order:2}.main{order:1}}
+
+    /* small utilities */
+    .row{display:flex;gap:8px;align-items:center}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <!--
+    HOW TO EDIT THIS TEMPLATE
+    - Replace the avatar image (see <img id="avatar">) with /assets/avatar.jpg in your repo.
+    - Update name, role, bio in the sidebar HTML below.
+    - Add projects in the `projects` array inside the <script> near the bottom OR change the markup of the .projects-grid directly.
+    - Save as index.html in the root of your GitHub repository and enable GitHub Pages (instructions in the README below).
+  -->
+
+  <div class="wrap" role="main">
+    <aside class="sidebar" aria-label="Profile sidebar">
+      <img id="avatar" class="avatar" src="assets/avatar.jpg" alt="Your avatar" />
+      <div>
+        <p class="name">Your Name</p>
+        <p class="role">Software engineer • ML enthusiast</p>
+        <p class="bio">I build web & ML projects. This page lists my public projects, demos and notes. Want to collaborate? Contact me below.</p>
+
+        <div class="socials" style="margin-top:14px">
+          <a class="pill" href="#projects">Projects</a>
+          <a class="pill" href="#contact">Contact</a>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="muted" style="font-size:13px">Contact</div>
+          <div style="margin-top:8px;font-size:13px">email: <a class="muted" href="mailto:you@example.com">you@example.com</a></div>
+          <div style="margin-top:6px;font-size:13px">github: <a class="muted" href="https://github.com/yourusername">@yourusername</a></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="main">
+      <header>
+        <div class="title">
+          <div>
+            <h1>Projects</h1>
+            <div class="sub">A curated list of my public projects and demos.</div>
+          </div>
+          <div class="row">
+            <a class="pill" href="resume.pdf" target="_blank">Resume</a>
+          </div>
+        </div>
+      </header>
+
+      <div id="projects" class="projects-grid" aria-live="polite">
+        <!-- project cards are rendered here by JavaScript -->
+      </div>
+
+      <section id="contact" style="margin-top:24px">
+        <h2 style="font-size:16px;margin:0">Contact</h2>
+        <p class="muted" style="margin-top:8px">I'm available for collaboration, freelance, or open-source contributions. Reach out via email or GitHub.</p>
+      </section>
+    </section>
+  </div>
+
+  <script>
+    // ====== EDIT THIS ARRAY TO ADD/UPDATE PROJECTS ======
+    const projects = [
+      {
+        title: 'Project Alpha',
+        desc: 'A short description of the project — what it does and technologies used.',
+        tags: ['JavaScript', 'Web', 'Demo'],
+        link: 'https://github.com/yourusername/project-alpha'
+      },
+      {
+        title: 'Robot Planner',
+        desc: 'An example robotics planning project with visualisations and datasets.',
+        tags: ['Python','ROS','Planning'],
+        link: 'https://github.com/yourusername/robot-planner'
+      },
+      {
+        title: 'ML Playground',
+        desc: 'Small experiments and notebooks for ML models and baselines.',
+        tags: ['Python','ML','Notebooks'],
+        link: 'https://github.com/yourusername/ml-playground'
+      }
+    ];
+
+    const grid = document.getElementById('projects');
+
+    function makeCard(p){
+      const d = document.createElement('div');
+      d.className='card';
+      const h = document.createElement('h3'); h.textContent = p.title;
+      const pdesc = document.createElement('p'); pdesc.textContent = p.desc;
+      const tags = document.createElement('div'); tags.className='tags';
+      (p.tags||[]).forEach(t=>{const s=document.createElement('span');s.className='tag';s.textContent=t;tags.appendChild(s)});
+      const a = document.createElement('a'); a.href = p.link; a.target='_blank'; a.rel='noopener'; a.textContent='View on GitHub';
+      d.appendChild(h); d.appendChild(pdesc); d.appendChild(tags); d.appendChild(a);
+      return d;
+    }
+
+    projects.forEach(p=>grid.appendChild(makeCard(p)));
+  </script>
+
+  <!-- README / quick deploy notes included in the file for convenience -->
+  <!--
+    QUICK README
+
+    1) Create a new GitHub repository named e.g. "portfolio" (or "yourusername.github.io" for a root user site).
+    2) Add this file as index.html in the repository root. Create an `assets/` folder and add avatar.jpg and resume.pdf if you want them.
+    3) Commit & push to GitHub.
+
+    Deploy options:
+    - Simple (recommended):
+      * If your repo is named yourusername.github.io, the site will be available at https://yourusername.github.io after pushing to main.
+      * Otherwise go to the repo Settings -> Pages, set Source = main (or main:/root), save. The site will be at https://yourusername.github.io/repo-name/.
+
+    - Alternative: Use the gh-pages branch and a small action to deploy. See GitHub Pages docs.
+
+    Editing content:
+      - Edit HTML directly for small changes.
+      - Or keep projects in a separate JSON/MD file and fetch them with JS if you want many projects.
+
+    Making it a template on GitHub:
+      - After creating the repository, go to Settings -> General -> Template repository -> Enable. Then others (or you) can "Use this template" to create new repos.
+  -->
+</body>
+</html>
