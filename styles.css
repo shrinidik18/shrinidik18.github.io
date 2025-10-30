@@ -1,5 +1,23 @@
 :root{--muted:#6b7785;--accent:#1976a5}
 *{box-sizing:border-box}
+
+/* --- selection color: make selected text black with a light background --- */
+::selection {
+  background: #b3d4ff; /* light selection background */
+  color: #000;         /* selected text color (black) */
+}
+::-moz-selection {     /* Firefox */
+  background: #b3d4ff;
+  color: #000;
+}
+
+/* also ensure hero title selection is black (explicit) */
+.hero-title::selection,
+.hero-title::-moz-selection {
+  background: #b3d4ff;
+  color: #000;
+}
+
 body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;color:#222}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 .topbar{background:#0b0b0b;color:#fff}
