@@ -1,1 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Experiments with Generative Models — Shrinidi Kuppurajan</title>
+  <meta name="description" content="A study of generative modelling techniques applied to reinforcement learning.">
 
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f6f8c'/%3E%3Ctext x='50' y='50' font-family='Helvetica,Arial,sans-serif' font-size='44' font-weight='700' fill='%23ffffff' text-anchor='middle' dominant-baseline='central'%3ESK%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="topbar" id="topbar">
+  <div class="wrap nav-inner">
+    <a class="site-name" href="../index.html">Shrinidi&nbsp;Kuppurajan</a>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../resume.pdf">Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap project-page" id="main">
+
+  <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+
+  <header class="project-header">
+    <h1>Experiments with Generative Models</h1>
+    <p class="card-meta">CONTEXT · IIT Madras · YEAR</p>
+    <p class="lede">
+      One or two sentences framing the problem and what you actually built or proved.
+      This is the part most readers will stop at, so make it count.
+    </p>
+    <div class="project-tags">
+      <span class="chip">Tag one</span>
+      <span class="chip">Tag two</span>
+      <span class="chip">Tag three</span>
+    </div>
+  </header>
+
+  <article class="project-body">
+
+    <h2>Overview</h2>
+    <p>
+      What the problem was, why it matters, and the shape of your approach.
+    </p>
+
+    <!-- A figure. Swap the src for a real image or GIF in ../assets/ -->
+    <figure>
+      <img src="../assets/sample5.png" alt="Describe what this figure shows">
+      <figcaption>Caption explaining what the reader is looking at.</figcaption>
+    </figure>
+
+    <h2>Approach</h2>
+    <h3>Modelling</h3>
+    <ul>
+      <li>Key modelling decision and why.</li>
+      <li>Assumptions and where they break down.</li>
+    </ul>
+
+    <h3>Implementation</h3>
+    <p>
+      Tooling, simulation environment, hardware — whatever a reader would need
+      to judge the work. Inline <code>code</code> renders like this.
+    </p>
+
+    <pre><code>// A short, illustrative snippet — not the whole file.
+result = solve(system, horizon=50)</code></pre>
+
+    <!-- Text beside an image -->
+    <div class="split">
+      <div>
+        <h3>Results</h3>
+        <p>What happened. Numbers beat adjectives here.</p>
+      </div>
+      <img src="../assets/sample2.jpg" alt="Describe this result figure">
+    </div>
+
+    <h2>Results</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Method</th><th>Metric</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Baseline</td><td>Success rate</td><td>—</td></tr>
+          <tr><td>Ours</td><td>Success rate</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Takeaways</h2>
+    <p>What you'd do differently, and what the work opens up next.</p>
+
+    <p style="margin-top:40px">
+      <a class="btn" href="../index.html#projects">&larr; Back to projects</a>
+    </p>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Shrinidi Kuppurajan</p>
+    <div class="footer-links">
+      <a href="../resume.pdf">Résumé</a>
+      <a href="mailto:me22b018@smail.iitm.ac.in">Email</a>
+      <a href="https://github.com/shrinidik18" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var topbar = document.getElementById('topbar');
+  var onScroll = function () { topbar.classList.toggle('is-stuck', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+</body>
+</html>
